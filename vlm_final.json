@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) Yes, there is a full - body portrait of a young man (white t - shirt, black pants, hand on chin, arm crossed) visible standing on the right side of the hero, with a transparent background so the page background shows through.  \n2) No, the portrait is not standing on the baseline (feet are not at the bottom; the image is cropped above the feet).  \n3) Yes, the text “John Shannon Rodriguez” is on the left, with “Rodriguez” in italic orange.  \n4) The portrait is not cut off or distorted, but it is not a full - body shot (feet are not visible, so it is cropped above the baseline). The image itself appears to be the correct subject as described, with no obvious wrong image issues beyond the cropping.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783406008,
+  "id": "20260707143318447797444ab14696",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260707143318447797444ab14696",
+  "usage": {
+    "completion_tokens": 170,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1764,
+    "prompt_tokens_details": {
+      "cached_tokens": 5
+    },
+    "total_tokens": 1934
+  }
+}
