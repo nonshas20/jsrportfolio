@@ -16,23 +16,11 @@ export default function Home() {
       <Intro />
       <ScrollProgress />
       <Nav />
-      {/* page-level gradual blur under the header — content sharpens as it scrolls past the top edge */}
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 h-24">
-        <GradualBlur
-          position="top"
-          height="6rem"
-          strength={3}
-          divCount={7}
-          curve="bezier"
-          exponential
-          opacity={0.9}
-        />
-      </div>
       {/* page-level gradual blur at the bottom — upcoming content fades/blurs in as the user scrolls */}
-      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 h-28">
+      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 h-20">
         <GradualBlur
           position="bottom"
-          height="7rem"
+          height="5rem"
           strength={3}
           divCount={7}
           curve="bezier"
