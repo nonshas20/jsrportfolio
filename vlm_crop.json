@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The dark navigation bar starts at the very top pixel (y=0) with **no gap** above it (no detachment or space between the top edge of the page and the bar). It has **rounded corners** (visible on the left and right edges) and a subtle **shadow** around its perimeter (giving it a slight lifted appearance).  \n\nFor the topmost pixels (y=0 to y=20):  \n- The top 20 pixels contain the **upper edge of the dark navigation bar** (solid dark color, consistent with the bar’s background).  \n- No visible border or additional elements exist in this top section—only the bar’s top edge and the start of its rounded corners.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783404052,
+  "id": "202607071400416ff2e50d2bcf430f",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202607071400416ff2e50d2bcf430f",
+  "usage": {
+    "completion_tokens": 147,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 356,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 503
+  }
+}

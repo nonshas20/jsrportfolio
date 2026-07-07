@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) It is flush/stuck to the top edge (no visible gap above or on the sides).  \n2) Border: None (no visible border). Background opacity: Opaque (solid dark color). Shadow: None (no visible shadow).  \n3) No, it does not read as a clearly detached floating pill.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783403994,
+  "id": "202607071359428aa26a5e7aaf4939",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202607071359428aa26a5e7aaf4939",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1730,
+    "prompt_tokens_details": {
+      "cached_tokens": 5
+    },
+    "total_tokens": 1799
+  }
+}
