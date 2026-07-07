@@ -127,7 +127,7 @@ function ProjectChapter({ project, flip }: { project: Project; flip: boolean }) 
 
 export function Work() {
   return (
-    <section id="work" className="relative border-t border-line py-24 sm:py-32">
+    <section id="work" className="relative overflow-hidden border-t border-line py-24 sm:py-32">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         {/* section header */}
         <div className="mb-16 flex flex-col gap-6 sm:mb-24 sm:flex-row sm:items-end sm:justify-between">

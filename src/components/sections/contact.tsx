@@ -58,12 +58,12 @@ export function Contact() {
           <Magnetic strength={0.25}>
             <a
               href="mailto:johnshannonrodriguez20@gmail.com"
-              className="group inline-flex items-center gap-4 rounded-full bg-foreground px-7 py-4 text-background transition-transform"
+              className="group inline-flex max-w-full items-center gap-3 rounded-2xl bg-foreground px-5 py-3.5 text-background transition-transform sm:gap-4 sm:rounded-full sm:px-7 sm:py-4"
             >
-              <span className="font-display text-lg sm:text-xl">
+              <span className="font-display text-sm break-all sm:text-lg sm:break-normal">
                 johnshannonrodriguez20@gmail.com
               </span>
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-background/15 transition-transform duration-300 group-hover:rotate-45">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background/15 transition-transform duration-300 group-hover:rotate-45 sm:h-9 sm:w-9">
                 <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} />
               </span>
             </a>

@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex min-h-dvh flex-col overflow-x-hidden">
       <Intro />
       <ScrollProgress />
       <Nav />
