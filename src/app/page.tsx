@@ -28,6 +28,18 @@ export default function Home() {
           opacity={0.9}
         />
       </div>
+      {/* page-level gradual blur at the bottom — upcoming content fades/blurs in as the user scrolls */}
+      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 h-28">
+        <GradualBlur
+          position="bottom"
+          height="7rem"
+          strength={3}
+          divCount={7}
+          curve="bezier"
+          exponential
+          opacity={0.9}
+        />
+      </div>
       <main className="flex-1">
         <Hero />
         <Manifesto />

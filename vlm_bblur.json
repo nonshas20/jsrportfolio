@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The bottom 120px of the webpage viewport shows a **sharp, crisp black background** with no visible gradual blur effect. The content (a small circular element with the letter \"N\" on the left) is fully clear and unblurred—there is no gradient or fading at the bottom edge. The entire strip appears uniformly sharp, with no transition to blur as you move upward.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783410672,
+  "id": "2026070715505536c2c16d8af74616",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "2026070715505536c2c16d8af74616",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 282,
+    "prompt_tokens_details": {
+      "cached_tokens": 6
+    },
+    "total_tokens": 363
+  }
+}
