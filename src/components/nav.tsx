@@ -36,7 +36,7 @@ export function Nav() {
           width="100%"
           height="auto"
           borderRadius={18}
-          backgroundOpacity={0.72}
+          backgroundOpacity={0}
           saturation={1.6}
           brightness={62}
           opacity={0.92}
@@ -51,7 +51,7 @@ export function Nav() {
           </div>
         </GlassSurface>
       ) : (
-        <div className="flex h-16 w-full max-w-[1400px] items-center justify-between bg-gradient-to-b from-background/60 to-transparent px-5 sm:px-8">
+        <div className="flex h-16 w-full max-w-[1400px] items-center justify-between">
           <NavContent onMenuToggle={() => setMenuOpen((o) => !o)} menuOpen={menuOpen} />
         </div>
       )}
