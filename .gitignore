@@ -52,3 +52,12 @@ prompt
 server.log
 # Skills directory
 /skills/
+# Local-only artifacts (never ship)
+.env
+upload/
+img*.json
+portrait.json
+resume_extract.json
+resume_p0.png
+shot-*.png
+shot-*.jpg
