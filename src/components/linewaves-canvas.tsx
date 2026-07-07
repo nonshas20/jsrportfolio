@@ -45,9 +45,10 @@ export function LineWavesCanvas({ className }: { className?: string }) {
   if (!isClient || reducedMotion) return null;
 
   const isDark = resolvedTheme !== "light";
-  const color1 = isDark ? "#E8804A" : "#C85A28";
-  const color2 = isDark ? "#B8642A" : "#8A4A1E";
-  const color3 = isDark ? "#9CAB8C" : "#6B7A5E";
+  // signal orange (primary) + neutral (secondary) — infrastructure palette
+  const color1 = isDark ? "#E8702A" : "#C85A1A";
+  const color2 = isDark ? "#B85618" : "#9A4214";
+  const color3 = isDark ? "#8A8A8A" : "#6E6E6E";
 
   return (
     <div className={className} aria-hidden="true">
