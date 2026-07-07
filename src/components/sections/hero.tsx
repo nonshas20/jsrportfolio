@@ -59,89 +59,87 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* main — text left, portrait baseline-right (matches reference 1:1) */}
-      <div className="relative z-20 mx-auto flex w-full max-w-[1400px] flex-1 items-end px-5 pb-8 sm:px-8">
-        <div className="grid w-full grid-cols-1 items-end gap-8 lg:grid-cols-12 lg:gap-6">
-          {/* LEFT: text block, bottom-aligned */}
-          <div className="order-2 lg:order-1 lg:col-span-7 lg:pb-6">
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.25 }}
-              className="font-accent mb-2 text-[clamp(0.95rem,1.6vw,1.15rem)] italic text-muted-foreground"
+      {/* main — text left, portrait right, side-by-side on ALL breakpoints */}
+      <div className="relative z-20 mx-auto flex w-full max-w-[1400px] flex-1 items-end gap-3 px-5 pb-8 sm:gap-6 sm:px-8">
+        {/* LEFT: text block, bottom-aligned */}
+        <div className="min-w-0 flex-1 pb-4 lg:pb-6">
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.25 }}
+            className="font-accent mb-2 text-[clamp(0.85rem,1.6vw,1.15rem)] italic text-muted-foreground"
+          >
+            Hi, I&apos;m John Shannon.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.32 }}
+            className="eyebrow mb-4 flex items-center gap-3 text-ember sm:mb-6"
+          >
+            <span className="inline-block h-px w-8 bg-ember" />
+            Full-Stack Web Developer
+          </motion.p>
+
+          <h1 className="display text-foreground">
+            <span className="block text-[clamp(1.9rem,9vw,8rem)] leading-[0.95]">
+              <WordsReveal text="John" delay={0.36} />
+            </span>
+            <span className="block text-[clamp(1.9rem,9vw,8rem)] leading-[0.95]">
+              <WordsReveal text="Shannon" delay={0.46} />
+            </span>
+            <span className="-mt-1 block text-[clamp(1.9rem,9vw,8rem)] leading-[0.95] sm:-mt-2">
+              <WordsReveal
+                text="Rodriguez"
+                delay={0.58}
+                wordClassName="display-italic text-ember"
+              />
+            </span>
+          </h1>
+
+          <Reveal delay={0.82} className="mt-5 max-w-md sm:mt-7">
+            <p className="text-pretty text-[0.82rem] leading-relaxed text-muted-foreground sm:text-base">
+              I build the load-bearing software cities and small businesses
+              actually depend on —{" "}
+              <span className="text-foreground">
+                water bills, health records, vaccine counts, inventory and point-of-sale.
+              </span>{" "}
+              Magna Cum Laude candidate. President&apos;s List, four years running.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.95} className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-6 sm:gap-x-6">
+            <span className="inline-flex items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-muted-foreground sm:text-[0.7rem]">
+              <MapPin className="h-3.5 w-3.5 text-ember" strokeWidth={1.6} />
+              Parañaque City, PH
+            </span>
+            <a
+              href="#work"
+              className="group inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-foreground transition-colors hover:border-ember hover:text-ember sm:px-4 sm:py-2 sm:text-[0.66rem]"
             >
-              Hi, I&apos;m John Shannon.
-            </motion.p>
+              View work
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={1.6} />
+            </a>
+          </Reveal>
+        </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.32 }}
-              className="eyebrow mb-6 flex items-center gap-3 text-ember"
-            >
-              <span className="inline-block h-px w-8 bg-ember" />
-              Full-Stack Web Developer
-            </motion.p>
+        {/* RIGHT: full-body portrait, anchored to the right edge + baseline */}
+        <div className="relative flex h-[52vh] shrink-0 items-end justify-end sm:h-[74vh] lg:h-[96vh] lg:max-h-[940px]">
+          {/* soft ember glow behind the figure */}
+          <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-[70%] w-[90%] rounded-full bg-ember/15 blur-[80px]" />
 
-            <h1 className="display text-foreground">
-              <span className="block text-[clamp(2.6rem,9.5vw,8rem)]">
-                <WordsReveal text="John" delay={0.36} />
-              </span>
-              <span className="block text-[clamp(2.6rem,9.5vw,8rem)]">
-                <WordsReveal text="Shannon" delay={0.46} />
-              </span>
-              <span className="-mt-1 block text-[clamp(2.6rem,9.5vw,8rem)] sm:-mt-2">
-                <WordsReveal
-                  text="Rodriguez"
-                  delay={0.58}
-                  wordClassName="display-italic text-ember"
-                />
-              </span>
-            </h1>
-
-            <Reveal delay={0.82} className="mt-7 max-w-md">
-              <p className="text-pretty text-[0.95rem] leading-relaxed text-muted-foreground sm:text-base">
-                I build the load-bearing software cities and small businesses
-                actually depend on —{" "}
-                <span className="text-foreground">
-                  water bills, health records, vaccine counts, inventory and point-of-sale.
-                </span>{" "}
-                Magna Cum Laude candidate. President&apos;s List, four years running.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.95} className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <span className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
-                <MapPin className="h-3.5 w-3.5 text-ember" strokeWidth={1.6} />
-                Parañaque City, Philippines
-              </span>
-              <a
-                href="#work"
-                className="group inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 font-mono text-[0.66rem] uppercase tracking-[0.18em] text-foreground transition-colors hover:border-ember hover:text-ember"
-              >
-                View selected work
-                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={1.6} />
-              </a>
-            </Reveal>
-          </div>
-
-          {/* RIGHT: full-body portrait, standing on the baseline */}
-          <div className="relative order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
-            {/* soft ember glow behind the figure */}
-            <div className="pointer-events-none absolute bottom-0 left-1/2 z-0 h-[70%] w-[80%] -translate-x-1/2 rounded-full bg-ember/15 blur-[90px]" />
-
-            <motion.img
-              src="/portrait.webp"
-              alt="John Shannon O. Rodriguez posing — hand on chin, arm crossed, full-body portrait."
-              style={{ y: portraitY }}
-              initial={{ opacity: 0, y: 30, clipPath: "inset(100% 0 0 0)" }}
-              animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.5 }}
-              className="relative z-10 h-[64vh] w-auto max-w-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] sm:h-[76vh] lg:h-[96vh] lg:max-h-[940px]"
-              loading="eager"
-              decoding="async"
-            />
-          </div>
+          <motion.img
+            src="/portrait.webp"
+            alt="John Shannon O. Rodriguez posing — hand on chin, arm crossed, full-body portrait."
+            style={{ y: portraitY }}
+            initial={{ opacity: 0, y: 30, clipPath: "inset(100% 0 0 0)" }}
+            animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
+            transition={{ duration: 1.1, ease: EASE, delay: 0.5 }}
+            className="relative z-10 h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)]"
+            loading="eager"
+            decoding="async"
+          />
         </div>
       </div>
 
