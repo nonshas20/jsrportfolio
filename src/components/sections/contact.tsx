@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { WordsReveal, Reveal, Magnetic } from "@/components/motion-primitives";
+import RotatingText from "@/components/rotating-text";
 
 const marqueeItems = [
   "Available for work",
@@ -42,7 +43,20 @@ export function Contact() {
         <h2 className="display max-w-5xl text-balance text-[clamp(2.2rem,7vw,5.5rem)] text-foreground">
           <WordsReveal text="Let’s build something" />{" "}
           <span className="display-italic text-ember">
-            <WordsReveal text="that lasts." delay={0.2} />
+            that{" "}
+            <RotatingText
+              texts={["lasts.", "works.", "scales.", "serves.", "ships."]}
+              mainClassName="inline-flex"
+              splitLevelClassName="overflow-hidden pb-[0.1em]"
+              elementLevelClassName="inline-block"
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-120%", opacity: 0 }}
+              staggerDuration={0.025}
+              staggerFrom="last"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2400}
+            />
           </span>
         </h2>
 
