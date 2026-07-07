@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) Wave pattern is intact and natural across the full 1440px hero. 2) Text (left) and portrait (right) are visible and well-balanced. 3) No regressions—polished and cohesive.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783407091,
+  "id": "20260707145127e35b9da124814ec8",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260707145127e35b9da124814ec8",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1721,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 1772
+  }
+}

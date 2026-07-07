@@ -18,8 +18,11 @@ export function Hero() {
       id="top"
       className="relative flex min-h-dvh flex-col overflow-hidden"
     >
-      {/* generative wave field (cursor-reactive) */}
-      <LineWavesCanvas className="pointer-events-none absolute inset-0 z-0 h-full w-full" />
+      {/* generative wave field (cursor-reactive) — capped on mobile to avoid stretch */}
+      <LineWavesCanvas className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[60vh] w-full lg:inset-0 lg:h-full" />
+
+      {/* mobile fade where the (capped) canvas ends, blending into solid background */}
+      <div className="pointer-events-none absolute inset-x-0 top-[38vh] z-0 h-[26vh] bg-gradient-to-b from-transparent via-background/70 to-background lg:hidden" />
 
       {/* ambient color washes + grain (above canvas, below content) */}
       <div className="pointer-events-none absolute inset-0 z-[1]">
@@ -59,15 +62,15 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* main — text left, portrait right, side-by-side on ALL breakpoints */}
-      <div className="relative z-20 mx-auto flex w-full max-w-[1400px] flex-1 items-end gap-3 px-5 pb-8 sm:gap-6 sm:px-8">
-        {/* LEFT: text block, bottom-aligned */}
-        <div className="min-w-0 flex-1 pb-4 lg:pb-6">
+      {/* main — text left, portrait right (desktop). Mobile: text, then portrait centered below. */}
+      <div className="relative z-20 mx-auto flex w-full max-w-[1400px] flex-1 flex-col items-stretch gap-6 px-5 pb-8 sm:px-8 lg:flex-row lg:items-end lg:gap-6">
+        {/* LEFT: text block */}
+        <div className="pb-2 lg:order-1 lg:flex-1 lg:pb-6">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.25 }}
-            className="font-accent mb-2 text-[clamp(0.85rem,1.6vw,1.15rem)] italic text-muted-foreground"
+            className="font-accent mb-2 text-[clamp(0.95rem,1.6vw,1.15rem)] italic text-muted-foreground"
           >
             Hi, I&apos;m John Shannon.
           </motion.p>
@@ -76,20 +79,20 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.32 }}
-            className="eyebrow mb-4 flex items-center gap-3 text-ember sm:mb-6"
+            className="eyebrow mb-6 flex items-center gap-3 text-ember"
           >
             <span className="inline-block h-px w-8 bg-ember" />
             Full-Stack Web Developer
           </motion.p>
 
           <h1 className="display text-foreground">
-            <span className="block text-[clamp(1.9rem,9vw,8rem)] leading-[0.95]">
+            <span className="block text-[clamp(2.6rem,9.5vw,8rem)]">
               <WordsReveal text="John" delay={0.36} />
             </span>
-            <span className="block text-[clamp(1.9rem,9vw,8rem)] leading-[0.95]">
+            <span className="block text-[clamp(2.6rem,9.5vw,8rem)]">
               <WordsReveal text="Shannon" delay={0.46} />
             </span>
-            <span className="-mt-1 block text-[clamp(1.9rem,9vw,8rem)] leading-[0.95] sm:-mt-2">
+            <span className="-mt-1 block text-[clamp(2.6rem,9.5vw,8rem)] sm:-mt-2">
               <WordsReveal
                 text="Rodriguez"
                 delay={0.58}
@@ -98,8 +101,8 @@ export function Hero() {
             </span>
           </h1>
 
-          <Reveal delay={0.82} className="mt-5 max-w-md sm:mt-7">
-            <p className="text-pretty text-[0.82rem] leading-relaxed text-muted-foreground sm:text-base">
+          <Reveal delay={0.82} className="mt-7 max-w-md">
+            <p className="text-pretty text-[0.95rem] leading-relaxed text-muted-foreground sm:text-base">
               I build the load-bearing software cities and small businesses
               actually depend on —{" "}
               <span className="text-foreground">
@@ -109,23 +112,23 @@ export function Hero() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.95} className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-6 sm:gap-x-6">
-            <span className="inline-flex items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-muted-foreground sm:text-[0.7rem]">
+          <Reveal delay={0.95} className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <span className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
               <MapPin className="h-3.5 w-3.5 text-ember" strokeWidth={1.6} />
-              Parañaque City, PH
+              Parañaque City, Philippines
             </span>
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-foreground transition-colors hover:border-ember hover:text-ember sm:px-4 sm:py-2 sm:text-[0.66rem]"
+              className="group inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 font-mono text-[0.66rem] uppercase tracking-[0.18em] text-foreground transition-colors hover:border-ember hover:text-ember"
             >
-              View work
+              View selected work
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={1.6} />
             </a>
           </Reveal>
         </div>
 
-        {/* RIGHT: full-body portrait, anchored to the right edge + baseline */}
-        <div className="relative flex h-[52vh] shrink-0 items-end justify-end sm:h-[74vh] lg:h-[96vh] lg:max-h-[940px]">
+        {/* RIGHT / BELOW: portrait — desktop right baseline, mobile centered below text */}
+        <div className="relative flex shrink-0 justify-center lg:order-2 lg:h-[96vh] lg:max-h-[940px] lg:items-end lg:justify-end">
           {/* soft ember glow behind the figure */}
           <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-[70%] w-[90%] rounded-full bg-ember/15 blur-[80px]" />
 
@@ -136,7 +139,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30, clipPath: "inset(100% 0 0 0)" }}
             animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.5 }}
-            className="relative z-10 h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)]"
+            className="relative z-10 h-[46vh] w-auto object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] lg:h-full lg:max-w-none"
             loading="eager"
             decoding="async"
           />
