@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Intro } from "@/components/intro";
 import { Hero } from "@/components/sections/hero";
 import { Manifesto } from "@/components/sections/manifesto";
+import { Stack } from "@/components/sections/stack";
 import { Work } from "@/components/sections/work";
 import { About } from "@/components/sections/about";
 import { Contact } from "@/components/sections/contact";
@@ -17,6 +18,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Manifesto />
+        <Stack />
         <Work />
         <About />
         <Contact />
