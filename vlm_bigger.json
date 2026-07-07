@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) The portrait on the right occupies roughly **60-70% of the viewport height** (dominant vertical presence).  \n2) No, the person’s full body is **not visible**—the image is cropped at the waist/hips, so the feet are cut off, and they are not standing on the baseline.  \n3) Yes, the portrait looks **large and dominant** (visually prominent against the background, balancing the text on the left).  \n4) Yes, there are **cropping/cut-off issues**: the lower body (waist down) is truncated, and the top of the head is slightly close to the frame but not severely cropped.  \n5) The composition feels **balanced** overall: the large portrait (right) and bold text (left) create visual harmony, with the dynamic background unifying both elements. The dominance of the portrait complements the text without overwhelming it.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783406090,
+  "id": "20260707143443aaf2eff0f8d84131",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260707143443aaf2eff0f8d84131",
+  "usage": {
+    "completion_tokens": 190,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1743,
+    "prompt_tokens_details": {
+      "cached_tokens": 6
+    },
+    "total_tokens": 1933
+  }
+}

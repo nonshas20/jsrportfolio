@@ -137,7 +137,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30, clipPath: "inset(100% 0 0 0)" }}
               animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
               transition={{ duration: 1.1, ease: EASE, delay: 0.5 }}
-              className="relative z-10 h-[42vh] w-auto object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] sm:h-[52vh] lg:h-[78vh] lg:max-h-[820px]"
+              className="relative z-10 h-[64vh] w-auto max-w-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] sm:h-[76vh] lg:h-[96vh] lg:max-h-[940px]"
               loading="eager"
               decoding="async"
             />
