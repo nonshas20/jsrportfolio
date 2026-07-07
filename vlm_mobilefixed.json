@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) Yes, on the left: a circular 'JSR' logo (with the letters \"JSR\" inside a circle) is followed by the wordmark text \"John Shannon.\" (including the dot) immediately to its right.  \n2) Yes, on the right: a theme toggle icon (sun/moon) is positioned next to a hamburger menu icon (three horizontal lines).  \n3) Yes, the bar looks balanced and intentional—there is no large empty gap in the middle; the left (logo + text) and right (theme toggle + menu) elements are spaced to create visual equilibrium.  \n4) Yes, the glass pill effect is visible: the navigation bar has a rounded, semi-transparent (glass-like) background with a subtle pill shape, giving it a modern, frosted appearance.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783406333,
+  "id": "2026070714384627a6d36c69c44476",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "2026070714384627a6d36c69c44476",
+  "usage": {
+    "completion_tokens": 168,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 177,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 345
+  }
+}
