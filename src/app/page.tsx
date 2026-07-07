@@ -1,5 +1,6 @@
 import { ScrollProgress } from "@/components/motion-primitives";
 import { Nav } from "@/components/nav";
+import { Intro } from "@/components/intro";
 import { Hero } from "@/components/sections/hero";
 import { Manifesto } from "@/components/sections/manifesto";
 import { Work } from "@/components/sections/work";
@@ -10,6 +11,7 @@ import { Footer } from "@/components/footer";
 export default function Home() {
   return (
     <div className="flex min-h-dvh flex-col">
+      <Intro />
       <ScrollProgress />
       <Nav />
       <main className="flex-1">

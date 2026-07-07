@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) **Subject**: A young man with short black hair, standing in a relaxed, confident pose. He faces the camera directly, with his right hand resting thoughtfully on his chin (index finger touching his cheek) and his left arm crossed over his torso. His clothing is casual: a plain white short-sleeved t-shirt, black loose-fitting trousers, and white Nike sneakers with black swoosh logos.  \n\n2) **Background**: Transparent (PNG alpha), with no solid color or visible elements—ideal for overlaying on custom hero section backgrounds.  \n\n3) **Framing**: Full-body, capturing the subject from head to toe (including shoes), with balanced negative space around him.  \n\n4) **Orientation & Aspect Ratio**: Portrait orientation, with an apparent aspect ratio of approximately 2:3 (taller than wide), optimized for vertical hero sections.  \n\n5) **Lighting & Color**: Soft, even lighting with no harsh shadows, highlighting the subject’s features and clothing. The color palette is minimal: crisp white (t-shirt, shoes), deep black (trousers), and natural skin tones, creating a clean, modern aesthetic.  \n\n\nThis image is well-suited for a hero section due to its transparent background (easy to integrate with text/graphics), full-body framing (conveys personality), and neutral, versatile style that complements various design themes.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783405640,
+  "id": "20260707142711a6ecf32c66d244c6",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260707142711a6ecf32c66d244c6",
+  "usage": {
+    "completion_tokens": 284,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2141,
+    "prompt_tokens_details": {
+      "cached_tokens": 6
+    },
+    "total_tokens": 2425
+  }
+}
