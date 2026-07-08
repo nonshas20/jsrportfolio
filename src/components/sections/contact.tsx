@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { WordsReveal, Reveal, Magnetic } from "@/components/motion-primitives";
 import RotatingText from "@/components/rotating-text";
+import { FaultyTerminalCanvas } from "@/components/faulty-terminal-canvas";
 
 const marqueeItems = [
   "Available for work",
@@ -34,7 +35,12 @@ export function Contact() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1400px] px-5 py-24 sm:px-8 sm:py-32">
+      <div className="relative mx-auto max-w-[1400px] px-5 py-24 sm:px-8 sm:py-32">
+        {/* FaultyTerminal CRT background — from "Let's build something" onward */}
+        <FaultyTerminalCanvas className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
+        {/* dark overlay so text stays readable over the glitch field */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-background/75" />
+
         <Reveal className="eyebrow mb-8 flex items-center gap-3 text-muted-foreground">
           <span className="inline-block h-px w-8 bg-ember" />
           Contact
