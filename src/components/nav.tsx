@@ -27,38 +27,31 @@ export function Nav() {
       initial={{ y: -90, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-      className={`fixed inset-x-0 top-0 z-50 flex justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-        scrolled ? "px-3 pt-3 sm:px-5 sm:pt-5" : "px-5 pt-3 sm:px-8 sm:pt-4"
-      }`}
+      className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-5 sm:pt-5"
     >
-      {scrolled ? (
-        <GlassSurface
-          width="100%"
-          height="auto"
-          borderRadius={18}
-          backgroundOpacity={0}
-          saturation={1.6}
-          brightness={62}
-          opacity={0.92}
-          blur={10}
-          distortionScale={-160}
-          greenOffset={8}
-          blueOffset={16}
-          className="!w-full max-w-[1400px] shadow-float"
-        >
-          <div className="flex w-full items-center justify-between px-3 py-2 sm:px-4">
-            <NavContent onMenuToggle={() => setMenuOpen((o) => !o)} menuOpen={menuOpen} />
-          </div>
-        </GlassSurface>
-      ) : (
-        <div className="flex h-16 w-full max-w-[1400px] items-center justify-between">
+      {/* always-on GlassSurface pill */}
+      <GlassSurface
+        width="100%"
+        height="auto"
+        borderRadius={18}
+        backgroundOpacity={0}
+        saturation={1.6}
+        brightness={62}
+        opacity={0.92}
+        blur={10}
+        distortionScale={-160}
+        greenOffset={8}
+        blueOffset={16}
+        className="!w-full max-w-[1400px] shadow-float"
+      >
+        <div className="flex w-full items-center justify-between px-3 py-2 sm:px-4">
           <NavContent onMenuToggle={() => setMenuOpen((o) => !o)} menuOpen={menuOpen} />
         </div>
-      )}
+      </GlassSurface>
 
       {/* mobile dropdown */}
       <AnimatePresence>
-        {menuOpen && scrolled && (
+        {menuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
