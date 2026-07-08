@@ -220,15 +220,16 @@ async function fetchContributions(): Promise<{ weeks: ContributionWeek[]; total:
 }
 
 export async function GET() {
-  const [liveProfile, liveRepos, contributions] = await Promise.all([
+  const [_liveProfile, _liveRepos, contributions] = await Promise.all([
     fetchProfile(),
     fetchRepos(),
     fetchContributions(),
   ]);
 
-  // Use live data when available, fall back to known profile/repos
-  const profile = liveProfile ?? FALLBACK_PROFILE;
-  const repos = liveRepos ?? FALLBACK_REPOS;
+  // Always use the curated portfolio profile + repos (the 5 showcased projects),
+  // not the live GitHub data. Only the contribution heatmap uses live data.
+  const profile = FALLBACK_PROFILE;
+  const repos = FALLBACK_REPOS;
 
   return NextResponse.json({
     profile,
