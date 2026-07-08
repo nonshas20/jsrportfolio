@@ -38,8 +38,8 @@ export function Contact() {
       <div className="relative mx-auto max-w-[1400px] px-5 py-24 sm:px-8 sm:py-32">
         {/* FaultyTerminal CRT background — from "Let's build something" onward */}
         <FaultyTerminalCanvas className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
-        {/* dark overlay so text stays readable over the glitch field */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-background/75" />
+        {/* subtle overlay for text readability (transparent canvas lets page bg through) */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-background/50" />
 
         <Reveal className="eyebrow mb-8 flex items-center gap-3 text-muted-foreground">
           <span className="inline-block h-px w-8 bg-ember" />

@@ -206,7 +206,8 @@ void main() {
       col += (rnd - 0.5) * (uDither * 0.003922);
     }
 
-    gl_FragColor = vec4(col, 1.0);
+    float alpha = clamp(length(col), 0.0, 1.0);
+    gl_FragColor = vec4(col, alpha);
 }
 `;
 
@@ -296,9 +297,9 @@ export default function FaultyTerminal({
     const ctn = containerRef.current;
     if (!ctn) return;
 
-    const renderer = new Renderer({ dpr });
+    const renderer = new Renderer({ dpr, alpha: true });
     const gl = renderer.gl;
-    gl.clearColor(0, 0, 0, 1);
+    gl.clearColor(0, 0, 0, 0);
 
     const geometry = new Triangle(gl);
 
