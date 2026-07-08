@@ -63,7 +63,7 @@ export function FaultyTerminalCanvas({ className }: { className?: string }) {
         mouseReact
         mouseStrength={0.25}
         pageLoadAnimation={false}
-        brightness={isDark ? 2.5 : 0.5}
+        brightness={isDark ? 1.6 : 0.38}
       />
     </div>
   );
