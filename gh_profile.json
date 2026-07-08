@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "### 1. Profile Header  \n- **Avatar**: Circular profile picture of a person holding a red/white wrapped food item (likely a burger) in a room with a wall, light switch, and framed decor.  \n- **Name**: \"Johnnyyy shanny\" (display name, bold white text).  \n- **Username**: \"nonshas20\" (gray text below the name).  \n- **Bio**: \"a bit of everythinng - vibe coding specialist\" (white text, casual tone).  \n- **Location**: Not visible.  \n- **Links**: No visible social links (e.g., Twitter, website) in the header.  \n- **Followers/Following**: Not visible in the header.  \n- **Edit Profile Button**: Dark gray button with white text \"Edit profile\" at the bottom of the header section.  \n\n\n### 2. Pinned Repositories (Labeled \"Popular repositories\")  \nFour repositories are displayed in a 2x2 grid, each with:  \n- **Repo Name**: Blue text (clickable link).  \n- **Visibility**: \"Public\" badge (gray text in a rounded rectangle).  \n- **Language**: Blue circle icon + \"TypeScript\" (gray text) for all repos.  \n- **Stars/Forks**: Not visible (no star/fork counts shown).  \n\n| Repo Name       | Description (Not Visible) | Language   | Stars | Forks |  \n|-----------------|---------------------------|------------|-------|-------|  \n| slimeatory      | —                         | TypeScript | —     | —     |  \n| fieldnotes      | —                         | TypeScript | —     | —     |  \n| pubgclone       | —                         | TypeScript | —     | —     |  \n| jsrportfolio    | —                         | TypeScript | —     | —     |  \n\n\n### 3. Contribution Graph / Activity  \n- **Title**: \"270 contributions in the last year\" (white text).  \n- **Graph**: A heatmap showing contributions by day of the week (Mon, Wed, Fri) and month (Jul–Jun). Green squares indicate contributions, with intensity varying (darker green = more contributions).  \n- **Legend**: \"Less\" (dark green) → \"More\" (bright green) at the bottom right.  \n- **Link**: \"Learn how we count contributions\" (gray text, under the graph).  \n- **Settings**: \"Contribution settings\" (gray text with a dropdown arrow) at the top right of the graph.  \n\n\n### 4. Stats, Achievements, or Badges  \n- **Contribution Count**: \"270 contributions in the last year\" (displayed above the graph).  \n- **Badges/Achievements**: Not visible (no profile badges or achievement icons).  \n\n\n### 5. Layout Structure  \n- **Sidebar (Left)**: Contains the avatar, name, username, bio, and \"Edit profile\" button.  \n- **Main Content (Right)**: Contains the \"Popular repositories\" section (2x2 grid) and \"Contribution activity\" section (graph + settings).  \n- **Color Scheme**: Dark theme (black background, white/gray text, blue links).  \n\n\n### Exact Details for Recreation  \n- Repo names: `slimeatory`, `fieldnotes`, `pubgclone`, `jsrportfolio` (all public, TypeScript).  \n- Contribution count: 270 (last year).  \n- Bio: \"a bit of everythinng - vibe coding specialist\".  \n- Username: `nonshas20`.  \n- Display name: `Johnnyyy shanny`.  \n- Graph months: Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr, May, Jun.  \n- Days of the week: Mon, Wed, Fri (displayed vertically on the left of the graph).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783486546,
+  "id": "202607081255280ae80300ad884113",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202607081255280ae80300ad884113",
+  "usage": {
+    "completion_tokens": 798,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1410,
+    "prompt_tokens_details": {
+      "cached_tokens": 7
+    },
+    "total_tokens": 2208
+  }
+}

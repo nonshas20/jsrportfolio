@@ -7,6 +7,7 @@ import { Manifesto } from "@/components/sections/manifesto";
 import { Stack } from "@/components/sections/stack";
 import { Work } from "@/components/sections/work";
 import { About } from "@/components/sections/about";
+import { GitHub } from "@/components/sections/github";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/footer";
 import GradualBlur from "@/components/gradual-blur";
@@ -36,6 +37,7 @@ export default function Home() {
           <Stack />
           <Work />
           <About />
+          <GitHub />
           <Contact />
         </main>
         <Footer />

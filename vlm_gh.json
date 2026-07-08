@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "### 1. Profile Card with Avatar, Name, Username, Bio, and Stats  \nYes, there is a **profile card** on the left side of the section. It includes:  \n- A circular avatar (a stylized image, likely the user’s profile picture).  \n- A name: *\"Johnnyyy shanny\"* (display name).  \n- A username: *@nonshas20* (GitHub handle).  \n- A bio: *\"a bit of everythinng - vibe coding specialist\"* (personal description).  \n- Stats: Three metrics—**Repos (0)**, **Followers (0)**, and **Following (0)**—displayed in a horizontal row below the bio.  \n\n\n### 2. Contribution Heatmap Graph  \nYes, there is a **contribution heatmap** on the right side. It includes:  \n- A title: *\"270 contributions in the last year\"* (total contributions over the past year).  \n- A grid of colored squares (heatmap) representing daily contribution activity. The squares use shades of orange (darker = more contributions) on a dark background.  \n- A legend at the bottom right: *\"Less\"* (lighter squares) to *\"More\"* (darker squares) to indicate contribution intensity.  \n- Days of the week (Mon, Wed, Fri) labeled on the left to contextualize the grid.  \n\n\n### 3. Repository Cards  \nNo, there are **no repository cards** visible in this section. The layout focuses on the profile card and contribution heatmap, but no cards with repository names, language dots, or metadata (e.g., stars, last updated) are present.  \n\n\n### 4. Polished GitHub-Style Integration  \nYes, the section **looks like a polished GitHub-style integration** into the portfolio. Key indicators:  \n- Dark theme (consistent with GitHub’s default dark mode).  \n- Clean, modern typography (e.g., the tagline *\"The code, out in the open\"* uses a mix of white and orange text, mirroring GitHub’s branding).  \n- Real-time data note: *\"Live from GitHub — profile, repositories, and contribution activity, fetched in real time\"* (explicitly ties the section to GitHub).  \n- Layout structure: Profile card (left) + heatmap (right) mirrors GitHub’s profile page layout.  \n\n\n### 5. Issues  \nNo obvious **loading state issues** (e.g., spinners, placeholder text) or **missing data** (all elements—avatar, name, bio, stats, heatmap—are fully rendered). The layout is stable, with no visible breaks or misalignments. However:  \n- The \"Repos/Followers/Following\" stats all show \"0,\" which may be accurate (if the user has no public repos/followers) or a potential data fetch issue (though the heatmap shows 270 contributions, so data is likely loading correctly).  \n- The heatmap’s text (e.g., \"JukugctoNaApdudtEheDeEeMaNayuUgctoNaApdudtEheDeEeMaNayuUgctoNaAfcApdudtEheDeEeMaNayuUgctoNaAfaApdun\") appears garbled, possibly a placeholder or rendering error (but the grid itself is functional).  \n\n\n### Summary  \nThe section successfully replicates core GitHub profile elements (profile card, contribution heatmap) with a polished, branded design. It lacks repository cards but otherwise functions as a cohesive GitHub integration. No critical layout or loading issues are present, though minor data display quirks (e.g., garbled heatmap text, zero stats) may warrant review.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783486822,
+  "id": "20260708125956bf0a947cad3e40ea",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260708125956bf0a947cad3e40ea",
+  "usage": {
+    "completion_tokens": 766,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1093,
+    "prompt_tokens_details": {
+      "cached_tokens": 7
+    },
+    "total_tokens": 1859
+  }
+}
