@@ -34,6 +34,13 @@ const credentials = [
 
 const timeline = [
   {
+    role: "Computer Programmer",
+    org: "City Health Office — Parañaque",
+    place: "Parañaque City",
+    years: "2026 — Present",
+    note: "Building and maintaining the health office's software systems — HRIS, immunization reporting, and inventory management.",
+  },
+  {
     role: "Barista",
     org: "Rustans Coffee — Starbucks",
     place: "BF Homes, Parañaque",
