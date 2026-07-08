@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The CRT/terminal glitch effect visibility is rated **2/10** (subtle, minimal visual noise).  \n\nOrange/ember pixelated glyphs (e.g., the envelope, phone, location icons) are **clearly visible** and distinct against the dark background. Text (e.g., “EMAIL,” “PHONE,” “LOCATION,” and the email address) is **readable** with good contrast between light text and the dark contact section.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783492475,
+  "id": "20260708143432d6fbbb99ab704432",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260708143432d6fbbb99ab704432",
+  "usage": {
+    "completion_tokens": 93,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1009,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 1102
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "For the CRT/terminal glitch effect visibility: 3/10 (subtle, mostly in the header; not prominent behind contact text).  \nFor text readability: 9/10 (text is clear, high contrast against the background).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783492362,
+  "id": "202607081432401e1d24f65c264cf0",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202607081432401e1d24f65c264cf0",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1017,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 1068
+  }
+}

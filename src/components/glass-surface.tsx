@@ -54,14 +54,6 @@ export default function GlassSurface({
   const redGradId = `red-grad-${uniqueId}`;
   const blueGradId = `blue-grad-${uniqueId}`;
 
-  // mounted guard — ensures server and initial client render match (no hydration mismatch)
-  // then swaps to the real glass surface after hydration
-  const isClient = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false
-  );
-
   const [svgSupported, setSvgSupported] = useState(false);
 
   // Feature-detect SVG backdrop-filter support once, on the client.
@@ -177,24 +169,6 @@ export default function GlassSurface({
     "--glass-saturation": saturation,
     "--filter-id": `url(#${filterId})`,
   };
-
-  // Before hydration (server + initial client render): render a plain div
-  // so server/client HTML matches exactly. After mount: render the real glass.
-  if (!isClient) {
-    return (
-      <div
-        className={`glass-surface glass-surface--fallback ${className}`}
-        style={{
-          ...style,
-          width: typeof width === "number" ? `${width}px` : width,
-          height: typeof height === "number" ? `${height}px` : height,
-          borderRadius: `${borderRadius}px`,
-        }}
-      >
-        <div className="glass-surface__content">{children}</div>
-      </div>
-    );
-  }
 
   return (
     <div

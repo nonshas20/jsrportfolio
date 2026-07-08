@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The background is flat and light gray (or off - white). There are no orange/amber pixelated dots, scanline patterns (even faintly), or other such visual elements present. It is a uniform, dark - toned flat background. flat dark",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783492390,
+  "id": "2026070814330766e4d4f547a04802",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "2026070814330766e4d4f547a04802",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 455,
+    "prompt_tokens_details": {
+      "cached_tokens": 6
+    },
+    "total_tokens": 510
+  }
+}

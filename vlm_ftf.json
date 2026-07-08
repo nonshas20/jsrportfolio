@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Visibility of the CRT/terminal glitch effect behind the text: 2/10 (subtle, mostly obscured by the dark background and text).  \nText readability: Yes, the text remains clearly readable despite the dark mode and underlying effect.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1783492429,
+  "id": "202607081433471712c02e3a534fe7",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202607081433471712c02e3a534fe7",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1020,
+    "prompt_tokens_details": {
+      "cached_tokens": 34
+    },
+    "total_tokens": 1071
+  }
+}
