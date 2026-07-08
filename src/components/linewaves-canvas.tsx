@@ -54,8 +54,8 @@ export function LineWavesCanvas({ className }: { className?: string }) {
     <div className={className} aria-hidden="true">
       <LineWaves
         speed={0.28}
-        innerLineCount={26}
-        outerLineCount={32}
+        innerLineCount={18}
+        outerLineCount={22}
         warpIntensity={1.0}
         rotation={-45}
         edgeFadeWidth={0.0}

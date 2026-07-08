@@ -172,7 +172,7 @@ export default function LineWaves({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({ alpha: true, premultipliedAlpha: false });
+    const renderer = new Renderer({ alpha: true, premultipliedAlpha: false, dpr: 1.5 });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
 
@@ -243,7 +243,14 @@ export default function LineWaves({
     container.appendChild(gl.canvas as HTMLCanvasElement);
 
     let animationFrameId = 0;
+    let isVisible = true;
+
     const update = (time: number) => {
+      // pause rAF when off-screen (major perf win)
+      if (!isVisible) {
+        animationFrameId = 0;
+        return;
+      }
       animationFrameId = requestAnimationFrame(update);
       if (!program) return;
       program.uniforms.uTime.value = time * 0.001;
@@ -262,10 +269,28 @@ export default function LineWaves({
 
       renderer.render({ scene: mesh });
     };
+
+    // pause/resume when the canvas enters/leaves the viewport
+    const visibilityObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const wasVisible = isVisible;
+          isVisible = entry.isIntersecting;
+          if (isVisible && !wasVisible && animationFrameId === 0) {
+            animationFrameId = requestAnimationFrame(update);
+          }
+        });
+      },
+      { rootMargin: "100px" }
+    );
+    visibilityObserver.observe(container);
+
+    // start immediately (observer may take a frame to fire)
     animationFrameId = requestAnimationFrame(update);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
+      visibilityObserver.disconnect();
       window.removeEventListener("resize", resize);
       if (enableMouseInteraction) {
         window.removeEventListener("mousemove", handleMouseMove);

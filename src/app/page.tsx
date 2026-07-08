@@ -26,11 +26,11 @@ export default function Home() {
           <GradualBlur
             position="bottom"
             height="5rem"
-            strength={3}
-            divCount={7}
+            strength={2.5}
+            divCount={4}
             curve="bezier"
             exponential
-            opacity={0.9}
+            opacity={0.8}
           />
         </div>
         <main className="flex-1">

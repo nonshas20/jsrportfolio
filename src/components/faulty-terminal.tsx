@@ -350,7 +350,14 @@ export default function FaultyTerminal({
     resizeObserver.observe(ctn);
     resize();
 
+    let isVisible = true;
+
     const update = (t: number) => {
+      // pause rAF when off-screen (major perf win)
+      if (!isVisible) {
+        rafRef.current = 0;
+        return;
+      }
       rafRef.current = requestAnimationFrame(update);
 
       if (pageLoadAnimation && loadAnimationStartRef.current === 0) {
@@ -386,6 +393,23 @@ export default function FaultyTerminal({
 
       renderer.render({ scene: mesh });
     };
+
+    // pause/resume when the canvas enters/leaves the viewport
+    const visibilityObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const wasVisible = isVisible;
+          isVisible = entry.isIntersecting;
+          if (isVisible && !wasVisible && rafRef.current === 0) {
+            rafRef.current = requestAnimationFrame(update);
+          }
+        });
+      },
+      { rootMargin: "100px" }
+    );
+    visibilityObserver.observe(ctn);
+
+    // start immediately (observer may take a frame to fire)
     rafRef.current = requestAnimationFrame(update);
     ctn.appendChild(gl.canvas as HTMLCanvasElement);
 
@@ -393,6 +417,7 @@ export default function FaultyTerminal({
 
     return () => {
       cancelAnimationFrame(rafRef.current);
+      visibilityObserver.disconnect();
       resizeObserver.disconnect();
       if (mouseReact) ctn.removeEventListener("mousemove", handleMouseMove);
       if (gl.canvas.parentElement === ctn) ctn.removeChild(gl.canvas as HTMLCanvasElement);
