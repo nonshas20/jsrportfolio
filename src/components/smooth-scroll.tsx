@@ -24,6 +24,9 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       lerp: 0.1,
     });
 
+    // expose lenis on window so other components (SideNav) can use scrollTo
+    (window as unknown as { lenis?: typeof lenis }).lenis = lenis;
+
     let rafId = 0;
     function raf(time: number) {
       lenis.raf(time);
@@ -60,6 +63,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       document.removeEventListener("visibilitychange", onVisibility);
       document.removeEventListener("click", onClick);
       lenis.destroy();
+      delete (window as unknown as { lenis?: typeof lenis }).lenis;
     };
   }, []);
 

@@ -2,6 +2,7 @@ import { ScrollProgress } from "@/components/motion-primitives";
 import { Nav } from "@/components/nav";
 import { Intro } from "@/components/intro";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { SideNav } from "@/components/side-nav";
 import { Hero } from "@/components/sections/hero";
 import { Manifesto } from "@/components/sections/manifesto";
 import { Stack } from "@/components/sections/stack";
@@ -19,6 +20,7 @@ export default function Home() {
         <Intro />
         <ScrollProgress />
         <Nav />
+        <SideNav />
         {/* page-level gradual blur at the bottom — upcoming content fades/blurs in as the user scrolls */}
         <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 h-20">
           <GradualBlur
